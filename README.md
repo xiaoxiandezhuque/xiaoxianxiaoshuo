@@ -8,7 +8,7 @@
 ![1](/img/1.jpg)![2](/img/2.jpg)
 ![3](/img/3.jpg)![4](/img/4.jpg)
 
-[下载apk](/app/release/xiaoxianmianfeixiaoshuo_v1.0.apk)
+[下载apk](/app/release/xiaoxianmianfeixiaoshuo_v1.0.0.apk)
 
 apk原来写了一些接口，后期由于阿里云到期，关闭了，所有的功能不需要登录也可使用
 

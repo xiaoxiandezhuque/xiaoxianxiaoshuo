@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="TitleView">
+        <attr name="titleColor" format="color"/>
+        <attr name="isLeftDisplay" format="boolean" />
+        <attr name="titleText" format="string" />
+        <attr name="rightText" format="string" />
+        <attr name="rightImg" format="reference" />
+        <attr name="leftImg" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="InputImgLayout">
+        <attr name="img" format="reference" />
+        <attr name="imgFocus" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="InputTextLayout">
+        <attr name="text" format="string" />
+
+    </declare-styleable>
+    <declare-styleable name="CheckView">
+        <attr name="imgNormal" format="reference" />
+        <attr name="imgCheck" format="reference" />
+    </declare-styleable>
+
+</resources>

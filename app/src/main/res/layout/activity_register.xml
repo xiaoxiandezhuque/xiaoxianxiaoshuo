@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.xh.common.view.TitleView
+        android:id="@+id/title_view"
+        style="@style/title"
+        app:titleText="注册"></com.xh.common.view.TitleView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40mm"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/edit_text"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:hint="手机号码"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+
+                <Button
+                    android:id="@+id/btn_get_code"
+                    style="@style/btn_style"
+                    android:layout_width="150mm"
+                    android:layout_height="40mm"
+                    android:text="获取验证码"
+                    android:textSize="24mm" />
+            </LinearLayout>
+
+            <View
+                style="@style/line1"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="20mm"
+                android:layout_marginRight="30mm" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40mm"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_vf"
+                    style="@style/edit_text"
+                    android:drawableLeft="@drawable/ic_code"
+                    android:hint="验证码"
+                    android:inputType="number"
+                    android:maxLength="4" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line1"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="20mm"
+                android:layout_marginRight="30mm" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40mm"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    style="@style/edit_text"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:hint="请设置密码(6-16位)"
+                    android:inputType="textPassword"
+                    android:maxLength="16" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line1"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="20mm"
+                android:layout_marginRight="30mm" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40mm"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_invitation_code"
+                    style="@style/edit_text"
+                    android:drawableLeft="@drawable/ic_invitation"
+                    android:hint="请输入邀请码（选填）"
+                    android:inputType="text"
+                    android:maxLength="6" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line1"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="20mm"
+                android:layout_marginRight="30mm" />
+
+            <Button
+                android:id="@+id/btn_register"
+                style="@style/btn_style"
+                android:layout_marginTop="100mm"
+                android:enabled="false"
+                android:text="注册" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.xh.common.view.TitleView
+        style="@style/title"
+        app:titleText="我的资料"></com.xh.common.view.TitleView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f3f3f3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_people"
+            android:layout_width="match_parent"
+            android:layout_height="88mm"
+            android:layout_marginTop="20mm"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30mm"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_people"
+                android:drawablePadding="8dp"
+                android:text="个人信息"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="28mm" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30mm"
+                android:src="@drawable/ic_next" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="88mm"
+            android:layout_marginTop="5mm"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30mm"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_phone1"
+                android:drawablePadding="8dp"
+                android:text="手机号"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="28mm" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30mm"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="22mm"
+                tools:text="1888888888" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_modify_password"
+            android:layout_width="match_parent"
+            android:layout_height="88mm"
+            android:layout_marginTop="5mm"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30mm"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_password1"
+                android:drawablePadding="8dp"
+                android:text="修改密码"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="28mm" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30mm"
+                android:src="@drawable/ic_next" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_cache"
+            android:layout_width="match_parent"
+            android:layout_height="88mm"
+            android:layout_marginTop="5mm"
+            android:background="#ffffff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30mm"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_cache"
+                android:drawablePadding="8dp"
+                android:text="清空缓存"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="28mm" />
+
+            <TextView
+                android:id="@+id/tv_cache_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10mm"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="28mm"
+                tools:text="100M" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30mm"
+                android:src="@drawable/ic_next" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_exit_login"
+            style="@style/btn_style"
+            android:layout_marginTop="30mm"
+            android:background="@drawable/selector_btn_blue"
+            android:text="退出登录" />
+    </LinearLayout>
+
+</LinearLayout>
+

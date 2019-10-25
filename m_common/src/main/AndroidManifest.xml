@@ -1,0 +1,31 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xh.common">
+
+    <application>
+
+        <!--glide配置-->
+        <meta-data
+            android:name="com.xh.common.config.GlideModelConfig"
+            android:value="GlideModule" />
+
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="768" />
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="1280" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>
+
+

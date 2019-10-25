@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.xh.common.view.TitleView
+        android:id="@+id/title_view"
+        style="@style/title"
+        app:rightImg="@drawable/ic_exit"
+        app:titleText="登录"></com.xh.common.view.TitleView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="190mm"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/edit_text"
+                    android:drawableLeft="@drawable/ic_phone"
+                    android:hint="手机号"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line1"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="20mm"
+                android:layout_marginRight="30mm" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60mm"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    style="@style/edit_text"
+                    android:drawableLeft="@drawable/ic_password"
+                    android:hint="密码"
+                    android:inputType="textPassword"
+                    android:maxLength="16" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/line1"
+                android:layout_marginLeft="30mm"
+                android:layout_marginTop="20mm"
+                android:layout_marginRight="30mm" />
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/btn_style"
+                android:layout_marginTop="50mm"
+                android:enabled="false"
+                android:text="登录" />
+
+            <Button
+                android:id="@+id/btn_register"
+                style="@style/btn_style"
+                android:layout_marginTop="20mm"
+                android:text="注册" />
+
+            <TextView
+                android:id="@+id/tv_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="10mm"
+                android:layout_marginRight="20mm"
+                android:layout_marginBottom="20mm"
+                android:padding="10mm"
+                android:text="忘记密码?"
+                android:textColor="@color/colorSecondaryText"
+                android:textSize="24mm" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
+

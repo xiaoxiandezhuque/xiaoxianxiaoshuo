@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80mm"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_content"
+            style="@style/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30mm"
+            android:layout_marginTop="10mm"
+            android:layout_marginRight="0mm"
+            android:layout_marginBottom="10mm"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_white_blue_5dp"
+            android:drawableLeft="@drawable/ic_search"
+            android:hint="请输入小说或者作者的名字"
+            android:maxLength="20"
+            android:paddingLeft="10mm"
+            android:paddingRight="10mm" />
+
+        <Button
+            android:id="@+id/btn_sourch"
+            style="@style/btn_style"
+            android:layout_width="100mm"
+            android:layout_height="50mm"
+            android:layout_gravity="center"
+            android:text="搜索"
+            android:textSize="24mm" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/btn_style"
+            android:layout_width="100mm"
+            android:layout_height="50mm"
+            android:layout_gravity="center"
+            android:layout_marginLeft="0mm"
+            android:text="取消"
+            android:textSize="24mm" />
+
+
+    </LinearLayout>
+
+    <View style="@style/line" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>
+

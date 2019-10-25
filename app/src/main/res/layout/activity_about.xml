@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.xh.common.view.TitleView
+        style="@style/title"
+        app:titleText="关于"></com.xh.common.view.TitleView>
+
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30mm"
+        android:layout_marginTop="20mm"
+        android:text="版本号"
+        android:textColor="#bababa"
+        android:textSize="24mm" />
+
+    <LinearLayout
+        android:id="@+id/ll_score"
+        android:layout_width="match_parent"
+        android:layout_height="88mm"
+        android:layout_marginTop="20mm"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30mm"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:text="去评分"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="28mm" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30mm"
+            android:src="@drawable/ic_next" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+
+    <com.xh.common.view.TitleView
+        style="@style/title"
+        app:titleText="书籍详情"></com.xh.common.view.TitleView>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            app:elevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_scrollFlags="scroll">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20mm"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="20mm">
+
+                    <com.qy.reader.common.widgets.CornerImageView
+                        android:id="@+id/iv_book_cover"
+                        android:layout_width="140mm"
+                        android:layout_height="200mm"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_cover"
+                        app:radius="6mm"
+                        app:shape="round" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:minHeight="200mm"
+                            android:orientation="vertical"
+                            android:paddingLeft="20mm">
+
+                            <TextView
+                                android:id="@+id/tv_book_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="30mm"
+                                tools:text="大唐荣耀" />
+
+                            <TextView
+                                android:id="@+id/tv_book_author"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12mm"
+                                android:drawablePadding="6mm"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:text="作者："
+                                android:textColor="@color/colorSecondaryText"
+                                android:textSize="24mm" />
+
+                            <TextView
+                                android:id="@+id/tv_book_newest_chapter"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="12mm"
+                                android:layout_weight="1"
+                                android:drawablePadding="6mm"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:lineSpacingMultiplier="1.1"
+                                android:maxLines="1"
+                                android:text="最新章节："
+                                android:textColor="@color/colorSecondaryText"
+                                android:textSize="24mm" />
+
+                            <TextView
+                                android:id="@+id/tv_read"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:drawablePadding="6mm"
+                                android:ellipsize="end"
+                                android:gravity="center_vertical"
+                                android:includeFontPadding="false"
+                                android:singleLine="true"
+                                android:textColor="@color/colorSecondaryText"
+                                android:textSize="24mm"
+                                tools:text="读到章节：" />
+
+
+                            <!--<TextView-->
+                            <!--android:id="@+id/tv_book_source"-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="0dp"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:drawablePadding="6mm"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:includeFontPadding="false"-->
+                            <!--android:text="来源(3)：起点"-->
+                            <!--android:textColor="@color/colorSecondaryText"-->
+                            <!--android:textSize="24mm" />-->
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_book_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12mm"
+                    android:drawablePadding="6mm"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:lineSpacingMultiplier="1.1"
+                    android:padding="20mm"
+                    android:text="简地"
+                    android:textSize="24mm" />
+
+
+                <View
+                    style="@style/line"
+                    android:layout_marginTop="40mm" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/app_spacing_4"
+                        android:paddingTop="20mm"
+                        android:paddingBottom="20mm"
+                        android:text="目录"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="28mm" />
+
+                    <TextView
+                        android:id="@+id/tv_order_by"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:drawablePadding="6mm"
+                        android:gravity="center_vertical"
+                        android:padding="20mm"
+                        android:text="正序"
+                        android:textColor="@color/colorSecondaryText"
+                        android:textSize="28mm" />
+
+
+                </LinearLayout>
+
+                <View style="@style/line" />
+
+            </LinearLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90mm"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add_bookshelf"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="加入书架"
+            android:textColor="#ffffff"
+            android:textSize="32mm" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorDivider" />
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            android:text="继续阅读"
+            android:textColor="#ffffff"
+            android:textSize="32mm" />
+    </LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.xh.common.view.TitleView
+        style="@style/title"
+        app:titleText="个人信息"></com.xh.common.view.TitleView>
+
+
+    <LinearLayout
+        android:id="@+id/ll_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="88mm"
+        android:layout_marginTop="20mm"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30mm"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:text="头像"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="28mm" />
+
+        <ImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="40mm"
+            android:layout_height="40mm"
+            android:layout_marginRight="20mm"
+            android:src="@drawable/ic_avatar2" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30mm"
+            android:src="@drawable/ic_next" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_name"
+        android:layout_width="match_parent"
+        android:layout_height="88mm"
+        android:layout_marginTop="2mm"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30mm"
+            android:layout_weight="1"
+            android:drawablePadding="8dp"
+            android:text="昵称"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="28mm" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20mm"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="24mm"
+            tools:text="zhikasdkjfds" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30mm"
+            android:src="@drawable/ic_next" />
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_birthday"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="88mm"-->
+        <!--android:layout_marginTop="2mm"-->
+        <!--android:background="#ffffff"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="30mm"-->
+            <!--android:layout_weight="1"-->
+            <!--android:drawablePadding="8dp"-->
+            <!--android:text="生日"-->
+            <!--android:textColor="@color/colorPrimaryText"-->
+            <!--android:textSize="28mm" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_birthday"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="20mm"-->
+            <!--android:textColor="@color/colorSecondaryText"-->
+            <!--android:textSize="24mm"-->
+            <!--tools:text="2011-05-20" />-->
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="30mm"-->
+            <!--android:src="@drawable/ic_next" />-->
+
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_sex"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="88mm"-->
+        <!--android:layout_marginTop="2mm"-->
+        <!--android:background="#ffffff"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="30mm"-->
+            <!--android:layout_weight="1"-->
+            <!--android:drawablePadding="8dp"-->
+            <!--android:text="性别"-->
+            <!--android:textColor="@color/colorPrimaryText"-->
+            <!--android:textSize="28mm" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_sex"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="20mm"-->
+            <!--android:textColor="@color/colorSecondaryText"-->
+            <!--android:textSize="24mm"-->
+            <!--tools:text="保密" />-->
+
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="30mm"-->
+            <!--android:src="@drawable/ic_next" />-->
+
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>
+

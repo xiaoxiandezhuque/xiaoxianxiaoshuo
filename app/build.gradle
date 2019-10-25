@@ -1,0 +1,103 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.xh.xiaoshuo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //MultiDex分包方法
+        multiDexEnabled true
+
+
+    }
+    //ARutoer 路由设置
+    kapt {
+        arguments {
+            arg("AROUTER_MODULE_NAME", project.getName())
+            includeCompileClasspath = true
+        }
+    }
+
+
+    signingConfigs {
+        release {
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file('../app/xiaoshuo.jks')
+            storePassword '123456'
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+            minifyEnabled false
+//            zipAlignEnabled true
+//            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+
+        release {
+            debuggable false
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.all {
+                    // 输出apk名称为great_v1.0_wandoujia.apk
+                    def fileName = "xiaoxianmianfeixiaoshuo_v${defaultConfig.versionName}.apk"
+                    outputFileName = fileName
+
+                }
+            }
+//            signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "2b14b5caeb8d6"
+    appSecret "af653a31ddaf144174cc2c659e533405"
+
+    SMSSDK {
+        version "3.2.1"
+    }
+}
+greendao {
+    schemaVersion 1
+    daoPackage 'com.xh.xiaoshuo.database'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    kapt "org.permissionsdispatcher:permissionsdispatcher-processor:$permissionsApiVersion"
+    //Arouter路由
+    kapt "com.alibaba:arouter-compiler:$arouterApiVersion"
+    //公用依赖库
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation project(':m_common')
+    implementation project(':crawler')
+    implementation project(':imagepicker')
+
+}

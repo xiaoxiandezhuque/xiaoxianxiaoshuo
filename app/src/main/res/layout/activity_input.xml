@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.xh.common.view.TitleView
+        android:id="@+id/title_view"
+        style="@style/title"
+        app:rightText="保存"
+        app:titleText="传进来"></com.xh.common.view.TitleView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80mm"
+        android:layout_marginTop="20mm"
+        android:background="#ffffff"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:inputType="text"
+            android:maxLength="30"
+            android:paddingLeft="20mm"
+            android:paddingRight="20mm"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="22mm"
+            tools:text="就好科技大厦" />
+
+        <ImageView
+            android:id="@+id/iv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="20mm"
+            android:padding="10mm"
+            android:src="@drawable/ic_cancel" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

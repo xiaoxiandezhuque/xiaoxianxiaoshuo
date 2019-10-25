@@ -1,0 +1,2 @@
+include ':app',':m_common',':crawler',':imagepicker'
+rootProject.name='xiaoshuo'

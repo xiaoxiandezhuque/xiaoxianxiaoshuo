@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <!--当shape=rectangle的时候使用  圆角-->
+
+            <solid  android:color="#bec5be"/>
+
+        </shape>
+
+    </item>
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <!--当shape=rectangle的时候使用  圆角-->
+
+            <gradient android:angle="0" android:endColor="#7fbf5f" android:startColor="#2a8c4b" android:type="linear" />
+
+        </shape>
+    </item>
+
+    <item >
+        <shape android:shape="rectangle">
+            <!--当shape=rectangle的时候使用  圆角-->
+
+            <gradient android:angle="0" android:endColor="#9ed882" android:startColor="#43a664" android:type="linear" />
+
+        </shape>
+
+    </item>
+</selector>

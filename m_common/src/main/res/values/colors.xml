@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#ff7c53</color>
+    <color name="colorPrimaryDark">#ff7c53</color>
+    <color name="colorAccent">#ff7c53</color>
+
+
+    <!--输入的字体颜色-->
+    <color name="styleEditTextColor">#f00909</color>
+    <!--主要提示-->
+    <color name="styleTextColor">#555555</color>
+    <!--次要提示-->
+    <color name="styleTextHintColor">#999999</color>
+
+
+</resources>

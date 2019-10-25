@@ -1,0 +1,92 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeForLauncher" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@mipmap/splash</item>
+
+    </style>
+
+    <style name="title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">96mm</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="titleColor">@color/colorTextIcon</item>
+    </style>
+
+    <style name="line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1mm</item>
+        <item name="android:background">@color/colorDivider</item>
+    </style>
+
+    <style name="line1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1mm</item>
+        <item name="android:background">@color/colorDivider</item>
+    </style>
+
+    <style name="tv_first">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textSize">28mm</item>
+    </style>
+
+    <style name="tv_second">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorSecondaryText</item>
+        <item name="android:textSize">28mm</item>
+    </style>
+
+    <style name="edit_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">65mm</item>
+        <item name="android:layout_marginRight">65mm</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">20mm</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textColorHint">@color/colorSecondaryText</item>
+        <item name="android:textSize">26mm</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+    <style name="edit_text_white_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">50mm</item>
+        <item name="android:layout_marginRight">50mm</item>
+        <item name="android:background">@null</item>
+        <item name="android:drawablePadding">20mm</item>
+        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textColorHint">@color/colorSecondaryText</item>
+        <item name="android:textSize">28mm</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+
+    <style name="btn_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70mm</item>
+        <item name="android:layout_marginLeft">30mm</item>
+        <item name="android:layout_marginRight">30mm</item>
+        <item name="android:background">@drawable/selector_btn_blue</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">36mm</item>
+    </style>
+
+</resources>

@@ -124,10 +124,7 @@ class ReadWebActivity : BaseActivity() {
         getBookBeanFromDB()
     }
 
-    override fun onRestart() {
-        super.onRestart()
 
-    }
 
     override fun onPause() {
         super.onPause()

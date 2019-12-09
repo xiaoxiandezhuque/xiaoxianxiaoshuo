@@ -30,6 +30,7 @@ import com.xh.xiaoshuo.bean.TextBean
 import com.xh.xiaoshuo.constant.SPConstant
 import com.xh.xiaoshuo.mode.BookDB
 import com.xh.xiaoshuo.ui.book.BookInfoAdapter
+import com.xh.xiaoshuo.util.ScreenUtil
 import kotlinx.android.synthetic.main.activity_read.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -78,6 +79,7 @@ class ReadActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         ScreenUtils.setFullScreen(this)
+
         super.onCreate(savedInstanceState)
     }
 
@@ -167,6 +169,7 @@ class ReadActivity : BaseActivity() {
             getCharpterContent(mChapterList.get(postion), {
                 read_view.jumpChapter(postion + 1)
                 drawerlayout.closeDrawers()
+                ScreenUtil.hideSystemNavigationBar(this)
             })
 
         }
@@ -225,10 +228,21 @@ class ReadActivity : BaseActivity() {
             }
         }
 
+
+
         initText()
 
         getBookBeanFromDB()
     }
+
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+
+        ScreenUtil.hideSystemNavigationBar(this)
+    }
+
+
 
     private fun getCurrentChapter(chapter: Chapter): Int {
         var chapterIndex = 0
@@ -250,7 +264,9 @@ class ReadActivity : BaseActivity() {
             if (!read_view.isInit()) {
                 read_view.initChapterList(mSource.source.id, mBookNum, mChapterList, currentChapter, 1)
             }
+            listener?.invoke()
             read_view.postInvalidate()
+            mLoadingDialog.dismiss()
             return
         }
 

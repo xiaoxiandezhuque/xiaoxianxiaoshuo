@@ -1,5 +1,6 @@
 package com.xh.xiaoshuo.ui.book
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,13 +23,16 @@ import kotlinx.android.synthetic.main.activity_book_info.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import permissions.dispatcher.NeedsPermission
+import permissions.dispatcher.OnPermissionDenied
+import permissions.dispatcher.RuntimePermissions
 import java.util.*
 
 
 /**
  * Created by quezhongsang on 2018/1/13.
  */
-
+@RuntimePermissions
 class BookInfoActivity : BaseActivity() {
 
 
@@ -72,37 +76,11 @@ class BookInfoActivity : BaseActivity() {
 
         mAdapter.setOnItemClickListener { view, postion, data ->
             //            正序和倒叙的位子不一样，所有直接找对象的位子
-            intentToRead(mChapterList.indexOf(data))
+            intentToReadWithPermissionCheck(mChapterList.indexOf(data))
             UMStatisticsUtil.book(this, mSearchBook.title + "", mSearchBook.author + "")
         }
 
 
-//        tv_book_source.setOnClickListener {
-//            if (mSourceList.size == 0) {
-//                return@setOnClickListener
-//            }
-//            val items = mutableListOf<String>()
-//            for (i in mSourceList.indices) {
-//                items.add(mSourceList[i].source.name)
-//            }
-//
-//            SelectorUtil.showSelector(this,
-//                    "选择来源",
-//                    items,
-//                    tv_book_source.text.toString() + "", { position ->
-//                if (mCurrentSourcePosition != position) {
-//                    mCurrentSourcePosition = position
-//                    requestNet()
-//                    val source = mSourceList[mCurrentSourcePosition]
-//                    mBookBean?.link = source.link
-//                    mBookBean?.sourceId = source.source.id
-//                    mBookBean?.sourceName = source.source.name
-//                    mBookBean?.sourceUrl = source.source.searchURL
-//                }
-//            })
-//
-//
-//        }
 
         tv_order_by.setOnClickListener {
             val str = tv_order_by.getText().toString()
@@ -127,7 +105,7 @@ class BookInfoActivity : BaseActivity() {
         }
         btn_continue.setOnClickListener {
             if (mBookBean != null && mBookBean!!.readNum <= mChapterList.size) {
-                intentToRead(mBookBean!!.readNum - 1)
+                intentToReadWithPermissionCheck(mBookBean!!.readNum - 1)
             }
         }
 
@@ -143,6 +121,7 @@ class BookInfoActivity : BaseActivity() {
         }
 
     }
+
 
     override fun onResume() {
         super.onResume()
@@ -200,7 +179,7 @@ class BookInfoActivity : BaseActivity() {
 //                        tv_order_by.setText("倒序")
 //                    }
                         if (isToDetail && mBookBean != null && mBookBean!!.readNum <= mChapterList.size) {
-                            intentToRead(mBookBean!!.readNum - 1)
+                            intentToReadWithPermissionCheck(mBookBean!!.readNum - 1)
                         }
                     }
 
@@ -218,8 +197,8 @@ class BookInfoActivity : BaseActivity() {
 
     }
 
-
-    private fun intentToRead(position: Int) {
+    @NeedsPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    fun intentToRead(position: Int) {
         val sourceId = mSourceList.get(mCurrentSourcePosition).source.id
         if (sourceId == SourceID.CANGSHU99) {
             ReadWebActivity.intentToThis(this,
@@ -235,6 +214,11 @@ class BookInfoActivity : BaseActivity() {
                     mChapterList[position],
                     mSourceList.get(mCurrentSourcePosition))
         }
+    }
+
+    @OnPermissionDenied(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+    fun onWriteFileDenied() {
+        "不开启文件权限，不能正常阅读".showToast()
     }
 
 

@@ -243,7 +243,6 @@ class ReadActivity : BaseActivity() {
     }
 
 
-
     private fun getCurrentChapter(chapter: Chapter): Int {
         var chapterIndex = 0
         if (chapter != null) {
@@ -418,9 +417,18 @@ class ReadActivity : BaseActivity() {
             } else {
                 tv_bookshelf.setText("加入书架")
             }
-            if (currentChapter == mBookBean!!.readNum && read_view.isInit) {
-                currentPage = mBookBean!!.readPage
-                read_view.jumpPage(currentPage)
+
+            if (read_view.isInit) {
+                if (currentChapter == mBookBean!!.readNum) {
+                    currentPage = mBookBean!!.readPage
+                    read_view.jumpPage(currentPage)
+                } else {
+                    currentChapter = mBookBean!!.readNum
+                    currentPage = mBookBean!!.readPage
+                    read_view.jumpChapter(currentChapter)
+                    read_view.jumpPage(currentPage)
+                }
+
             }
         }
 
@@ -454,18 +462,6 @@ class ReadActivity : BaseActivity() {
 
     }
 
-//    override fun onConfigurationChanged(newConfig: Configuration) {
-//        super.onConfigurationChanged(newConfig)
-//        // 切换横竖屏，部分对象需要重新初始化
-//        if (read_view != null) {
-//            if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) { //横屏
-//                read_view.initScreenSize()
-//            } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) { //竖屏
-//                read_view.initScreenSize()
-//            }
-//        }
-//    }
-//
 
     companion object {
         fun intentToThis(context: Context, searchBook: SearchBook
